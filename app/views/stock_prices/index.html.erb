@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Stock Prices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Trade date</th>
+      <th>Open</th>
+      <th>Volume</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Adj close</th>
+      <th>Return</th>
+      <th>Stock</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stock_prices.each do |stock_price| %>
+      <tr>
+        <td><%= stock_price.trade_date %></td>
+        <td><%= stock_price.open %></td>
+        <td><%= stock_price.volume %></td>
+        <td><%= stock_price.high %></td>
+        <td><%= stock_price.low %></td>
+        <td><%= stock_price.close %></td>
+        <td><%= stock_price.adj_close %></td>
+        <td><%= stock_price.return %></td>
+        <td><%= stock_price.stock %></td>
+        <td><%= link_to 'Show', stock_price %></td>
+        <td><%= link_to 'Edit', edit_stock_price_path(stock_price) %></td>
+        <td><%= link_to 'Destroy', stock_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stock price', new_stock_price_path %>

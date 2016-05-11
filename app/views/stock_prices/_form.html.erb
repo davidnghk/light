@@ -1,0 +1,53 @@
+<%= form_for(@stock_price) do |f| %>
+  <% if @stock_price.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stock_price.errors.count, "error") %> prohibited this stock_price from being saved:</h2>
+
+      <ul>
+      <% @stock_price.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :trade_date %><br>
+    <%= f.date_select :trade_date %>
+  </div>
+  <div class="field">
+    <%= f.label :open %><br>
+    <%= f.text_field :open %>
+  </div>
+  <div class="field">
+    <%= f.label :volume %><br>
+    <%= f.number_field :volume %>
+  </div>
+  <div class="field">
+    <%= f.label :high %><br>
+    <%= f.text_field :high %>
+  </div>
+  <div class="field">
+    <%= f.label :low %><br>
+    <%= f.text_field :low %>
+  </div>
+  <div class="field">
+    <%= f.label :close %><br>
+    <%= f.text_field :close %>
+  </div>
+  <div class="field">
+    <%= f.label :adj_close %><br>
+    <%= f.text_field :adj_close %>
+  </div>
+  <div class="field">
+    <%= f.label :return %><br>
+    <%= f.text_field :return %>
+  </div>
+  <div class="field">
+    <%= f.label :stock_id %><br>
+    <%= f.text_field :stock_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

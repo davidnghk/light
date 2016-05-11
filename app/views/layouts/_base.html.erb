@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <%= csrf_meta_tags %>
+
+    <title>Light Bootstrap Dashboard by Creative Tim</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= favicon_link_tag 'light_bootstrap_dashboard/favicon.ico', rel: 'icon', type: 'image/ico' %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' %>
+    <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Roboto:400,700,300' %>
+    <%= stylesheet_link_tag 'light_bootstrap_dashboard/pe-icon-7-stroke', media: 'all', 'data-turbolinks-track' => true %>
+
+    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?sensor=false', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+    <%= yield :head %>
+  </head>
+  <body class="<%= yield :class %>" data-features="<%= yield :features %>">
+    <%= yield %>
+  </body>
+</html>

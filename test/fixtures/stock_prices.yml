@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trade_date: 2016-05-10
+  open: 9.99
+  volume: 1
+  high: 9.99
+  low: 9.99
+  close: 9.99
+  adj_close: 9.99
+  return: 9.99
+  stock_id: 
+
+two:
+  trade_date: 2016-05-10
+  open: 9.99
+  volume: 1
+  high: 9.99
+  low: 9.99
+  close: 9.99
+  adj_close: 9.99
+  return: 9.99
+  stock_id: 
